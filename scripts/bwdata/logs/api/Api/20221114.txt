@@ -1,0 +1,8 @@
+2022-11-14 18:57:05.741 +00:00 [Information] Api started.
+2022-11-14 19:00:00.039 +00:00 [Information] Starting job "EmergencyAccessTimeoutJob" at 11/14/2022 19:00:00.
+2022-11-14 19:00:00.039 +00:00 [Information] Starting job "AliveJob" at 11/14/2022 19:00:00.
+2022-11-14 19:00:00.039 +00:00 [Information] Starting job "EmergencyAccessNotificationJob" at 11/14/2022 19:00:00.
+2022-11-14 19:00:00.043 +00:00 [Information] It's alive!
+2022-11-14 19:00:00.045 +00:00 [Information] Finished job "AliveJob" at 11/14/2022 19:00:00.
+2022-11-14 19:00:00.569 +00:00 [Information] Finished job "EmergencyAccessNotificationJob" at 11/14/2022 19:00:00.
+2022-11-14 19:00:00.569 +00:00 [Information] Finished job "EmergencyAccessTimeoutJob" at 11/14/2022 19:00:00.

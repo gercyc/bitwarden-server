@@ -5,6 +5,8 @@
     <MvcRazorCompileOnPublish>false</MvcRazorCompileOnPublish>
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
     <ANCMPreConfiguredForIIS>true</ANCMPreConfiguredForIIS>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..</DockerfileContext>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -30,6 +32,7 @@
 
   <ItemGroup>
     <PackageReference Include="Azure.Messaging.EventGrid" Version="4.10.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.1" />
   </ItemGroup>
 

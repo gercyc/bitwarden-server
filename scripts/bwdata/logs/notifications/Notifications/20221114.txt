@@ -1,0 +1,3 @@
+2022-11-14 18:57:03.096 +00:00 [Warning] Storing keys in a directory '"/home/bitwarden/.aspnet/DataProtection-Keys"' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed.
+2022-11-14 18:57:03.481 +00:00 [Warning] No XML encryptor configured. Key {93119336-d123-4b83-b45b-bd632d213e6e} may be persisted to storage in unencrypted form.
+2022-11-14 19:57:23.874 +00:00 [Warning] Stopping service.

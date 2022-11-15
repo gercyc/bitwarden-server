@@ -1,0 +1,189 @@
+2022-11-14 18:57:29.586 +00:00 [Information] Migrating database.
+2022-11-14 18:57:34.220 +00:00 [Information] Beginning transaction
+2022-11-14 18:57:34.230 +00:00 [Information] Beginning database upgrade
+2022-11-14 18:57:34.233 +00:00 [Information] Checking whether journal table exists..
+2022-11-14 18:57:34.352 +00:00 [Information] Journal table does not exist
+2022-11-14 18:57:34.395 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2017-08-19_00_InitialSetup.sql"'
+2022-11-14 18:57:34.408 +00:00 [Information] Checking whether journal table exists..
+2022-11-14 18:57:34.412 +00:00 [Information] Creating the [dbo].[Migration] table
+2022-11-14 18:57:34.416 +00:00 [Information] The [dbo].[Migration] table has been created
+2022-11-14 18:57:35.038 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2017-08-22_00_LicenseCheckScripts.sql"'
+2022-11-14 18:57:35.053 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2017-08-30_00_CollectionWriteOnly.sql"'
+2022-11-14 18:57:35.077 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2017-09-06_00_CipherDetails.sql"'
+2022-11-14 18:57:35.101 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2017-09-08_00_OrgUserCounts.sql"'
+2022-11-14 18:57:35.110 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2017-10-25_00_OrgUserUpdates.sql"'
+2022-11-14 18:57:35.146 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2017-11-06_00_FamilyPlanAdjustments.sql"'
+2022-11-14 18:57:35.323 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2017-11-13_00_IndexTuning.sql"'
+2022-11-14 18:57:35.375 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2017-11-24_00_UpdateProcs.sql"'
+2022-11-14 18:57:35.516 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2017-12-12_00_Events.sql"'
+2022-11-14 18:57:35.604 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2018-02-28_00_LoginUris.sql"'
+2022-11-14 18:57:35.649 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2018-03-12_00_FixLoginUris.sql"'
+2022-11-14 18:57:35.670 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2018-03-21_00_AdminPortal.sql"'
+2022-11-14 18:57:35.694 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2018-04-02_00_Org2fa.sql"'
+2022-11-14 18:57:35.731 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2018-04-24_00_CipherQueryTuning.sql"'
+2022-11-14 18:57:35.839 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2018-06-11_00_WebVaultUpdates.sql"'
+2022-11-14 18:57:35.979 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2018-07-28_00_DbTuning.sql"'
+2022-11-14 18:57:35.998 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2018-08-14_00_UserKdf.sql"'
+2022-11-14 18:57:36.081 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2018-08-28_00_PremiumOrgAbilities.sql"'
+2022-11-14 18:57:36.088 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2018-09-25_00_OrgPurge.sql"'
+2022-11-14 18:57:36.126 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2018-10-17_00_ManagerRole.sql"'
+2022-11-14 18:57:36.271 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2018-12-19_00_OrgUserTwoFactorEnabled.sql"'
+2022-11-14 18:57:36.289 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2019-01-31_00_Transactions.sql"'
+2022-11-14 18:57:36.347 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2019-03-01_00_OrgApi.sql"'
+2022-11-14 18:57:36.453 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2019-05-01_00_CipherOrgDetailsFix.sql"'
+2022-11-14 18:57:36.459 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2019-05-15_00_GroupNameFixes.sql"'
+2022-11-14 18:57:43.705 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2019-05-28_00_CollectionCipherImprovements.sql"'
+2022-11-14 18:57:43.733 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2020-02-18_00_PolicySetup.sql"'
+2022-11-14 18:57:43.829 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2020-03-26_00_CipherSoftDelete.sql"'
+2022-11-14 18:57:44.066 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2020-04-01_00_CipherSoftDelete.sql"'
+2022-11-14 18:57:44.160 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2020-04-02_00_CipherSoftDelete.sql"'
+2022-11-14 18:57:44.179 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2020-04-09_00_CipherSoftDelete.sql"'
+2022-11-14 18:57:44.194 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2020-05-02_00_SprocPerfTweaks.sql"'
+2022-11-14 18:57:44.235 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2020-05-22_00_HiddenPassword.sql"'
+2022-11-14 18:57:44.377 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2020-06-23_00_OrgIdentifier.sql"'
+2022-11-14 18:57:44.434 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2020-06-24_00_SsoConfig.sql"'
+2022-11-14 18:57:44.496 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2020-06-25_00_ReferenceId.sql"'
+2022-11-14 18:57:44.574 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2020-07-17_00_ReferenceData.sql"'
+2022-11-14 18:57:44.654 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2020-07-20_00_OrgSso.sql"'
+2022-11-14 18:57:44.697 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2020-07-21_00_BulkDeleteCiphersAsOrgAdmin.sql"'
+2022-11-14 18:57:44.710 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2020-07-27_00_SsoUser.sql"'
+2022-11-14 18:57:44.733 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2020-07-28_00_SsoBound.sql"'
+2022-11-14 18:57:44.746 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2020-07-30_00_IdServerv4.sql"'
+2022-11-14 18:57:44.834 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2020-08-12_00_OrgIdentifierProc.sql"'
+2022-11-14 18:57:44.841 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2020-08-13_00_AllowNullMasterPassword.sql"'
+2022-11-14 18:57:44.850 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2020-08-19_00_AddIdentifierToOrgView.sql"'
+2022-11-14 18:57:44.866 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2020-08-19_00_SsoConfigGetAll.sql"'
+2022-11-14 18:57:44.870 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2020-08-28_00_OrgByIdentifierFix.sql"'
+2022-11-14 18:57:44.878 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2020-09-01_00_DeleteSsoUser.sql"'
+2022-11-14 18:57:44.885 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2020-09-01_01_DeleteSsoUser2.sql"'
+2022-11-14 18:57:44.898 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2020-09-02_00_DeleteSsoConfig.sql"'
+2022-11-14 18:57:44.905 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2020-10-06_00_Send.sql"'
+2022-11-14 18:57:44.949 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2020-10-08_00_DeleteOrgUserWithOrg.sql"'
+2022-11-14 18:57:44.958 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2020-10-14_00_OrgUserReadByUserIds.sql"'
+2022-11-14 18:57:44.968 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2020-10-20_00_OrgReadAbilities.sql"'
+2022-11-14 18:57:44.975 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2020-10-28_00_UserApiKey.sql"'
+2022-11-14 18:57:45.015 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2020-11-16_00_SalesTax.sql"'
+2022-11-14 18:57:45.039 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2020-11-18_00_EmergencyAccess.sql"'
+2022-11-14 18:57:45.103 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2020-12-04_00_OrgUserReadByOrgEmail.sql"'
+2022-11-14 18:57:45.107 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2020-12-06_00_OrgUserOrgDetailsReadByUserIdStatusOrgId.sql"'
+2022-11-14 18:57:45.114 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2020-12-14_00_Permissions.sql"'
+2022-11-14 18:57:45.185 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2021-01-05_00_ReturnRevisionDateOnCipherRestore.sql"'
+2022-11-14 18:57:45.196 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2021-01-28_00_AddDeleteSendsToUserDeleteById.sql"'
+2022-11-14 18:57:45.204 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2021-02-26_00_EmergencyAccess_ReadToNotify.sql"'
+2022-11-14 18:57:45.210 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2021-03-04_00_Installation_Enlarge_Email_Column.sql"'
+2022-11-14 18:57:45.222 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2021-03-04_01_User_Enlarge_Email_Column.sql"'
+2022-11-14 18:57:45.253 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2021-03-04_02_Organization_Enlarge_Email_Column.sql"'
+2022-11-14 18:57:45.278 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2021-03-04_03_OrganizationUser_Enlarge_Email_Column.sql"'
+2022-11-14 18:57:45.318 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2021-03-04_04_EmergencyAccess_Enlarge_Email_Column.sql"'
+2022-11-14 18:57:45.338 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2021-03-22_00_Send_Add_HideEmail_Column.sql"'
+2022-11-14 18:57:45.359 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2021-03-23_00_AddResetPasswordKey.sql"'
+2022-11-14 18:57:45.420 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2021-03-26_00_CipherDeletedIndex.sql"'
+2022-11-14 18:57:45.433 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2021-04-07_00_IncreaseOrgSeatSize.sql"'
+2022-11-14 18:57:45.558 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2021-04-16_00_OrganizationUser_DeleteMany.sql"'
+2022-11-14 18:57:45.580 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2021-04-27_00_OrganizationUser_UpsertMany.sql"'
+2022-11-14 18:57:45.603 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2021-04-28_00_OrgResetPasswordAbilityAndRsaKeys.sql"'
+2022-11-14 18:57:45.664 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2021-04-30_00_Select_Known_OrganizationUsers_Emails.sql"'
+2022-11-14 18:57:45.679 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2021-05-04_00_CipherPasswordPromptFixed.sql"'
+2022-11-14 18:57:45.736 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2021-05-11_00_BulkReinvite.sql"'
+2022-11-14 18:57:45.743 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2021-05-18_00_BulkConfirm.sql"'
+2022-11-14 18:57:45.755 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2021-05-27_00_SetQuotedIdentifier.sql"'
+2022-11-14 18:57:45.801 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2021-07-07_00_FixBulkConfirm.sql"'
+2022-11-14 18:57:45.809 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2021-07-08_00_EntityFrameworkSupport.sql"'
+2022-11-14 18:57:45.897 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2021-07-13_00_UserForcePasswordReset.sql"'
+2022-11-14 18:57:45.931 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2021-07-15_00_OrganizationUserReadByMinimumRole.sql"'
+2022-11-14 18:57:45.936 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2021-07-22_00_FixCollectionReadBy.sql"'
+2022-11-14 18:57:45.946 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2021-07-22_00_Provider.sql"'
+2022-11-14 18:57:46.162 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2021-08-12_00_ReadByMinimumRoleCheckStatus.sql"'
+2022-11-14 18:57:46.169 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2021-08-18_00_AutoscaleOrganizationsSeats.sql"'
+2022-11-14 18:57:46.191 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2021-08-19_00_FixTaxRate.sql"'
+2022-11-14 18:57:46.200 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2021-09-02_00_SsoUserReadyByUserIdOrganizationId.sql"'
+2022-11-14 18:57:46.206 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2021-09-10_00_DeleteProviderUser.sql"'
+2022-11-14 18:57:46.216 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2021-09-16_00_PolicyApplicableToUser.sql"'
+2022-11-14 18:57:46.229 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2021-09-21_01_SplitManageCollectionsJson.sql"'
+2022-11-14 18:57:46.242 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2021-10-21_00_DefaultAutoscaleLimitToCurrentSeats.sql"'
+2022-11-14 18:57:46.250 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2021-11-01_00_FixPolicyApplicableToUser.sql"'
+2022-11-14 18:57:46.258 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2021-11-02_00_OrganizationSponsorship.sql"'
+2022-11-14 18:57:46.395 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2021-11-08_00_KeyConnector.sql"'
+2022-11-14 18:57:46.444 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2021-11-09_00_DropUsesCryptoAgent.sql"'
+2022-11-14 18:57:46.456 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2021-11-12_00_KeyConnectorFlag.sql"'
+2022-11-14 18:57:46.514 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2021-11-18_00_MergeKeyConnectorAndFFE.sql"'
+2022-11-14 18:57:46.527 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2021-11-23_00_NullOrganizationSponsorshipOnFkDelete.sql"'
+2022-11-14 18:57:46.540 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2021-11-30_00_NullOrganizationSponsorshipOnOrgDelete.sql"'
+2022-11-14 18:57:46.554 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2022-01-21_00_RemoveU2F.sql"'
+2022-11-14 18:57:46.629 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2022-02-10_00_FailedLoginCaptcha.sql"'
+2022-11-14 18:57:46.659 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2022-03-01_00_AddApiKeysTable.sql"'
+2022-11-14 18:57:47.306 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2022-04-06_00_SponsorshipBulkActions.sql"'
+2022-11-14 18:57:47.332 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2022-04-13_00_OrganizationSponsorshipUpdates.sql"'
+2022-11-14 18:57:47.342 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2022-04-14_00_ReadOrganizationConnectionsByOrganizationId.sql"'
+2022-11-14 18:57:47.348 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2022-04-15_00_FixOrganizationConnectionCreate.sql"'
+2022-11-14 18:57:47.355 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2022-04-20_00_AddInstalltionIdToEvents.sql"'
+2022-11-14 18:57:47.375 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2022-05-10_00_RebuildMetadata.sql"'
+2022-11-14 18:57:47.399 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2022-05-23_00_OrgUserDelete.sql"'
+2022-11-14 18:57:47.410 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2022-05-24_00_DeviceUnknownVerification.sql"'
+2022-11-14 18:57:47.438 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2022-05-31_00_CipherOrganizationDetails.sql"'
+2022-11-14 18:57:47.443 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2022-06-08_00_DeactivatedUserStatus.sql"'
+2022-11-14 18:57:47.566 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2022-06-24_00_UseScimFlag.sql"'
+2022-11-14 18:57:47.602 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2022-07-15_00_FixOrgUserDetails.sql"'
+2022-11-14 18:57:47.618 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2022-07-19_00_FixUseScimFlag.sql"'
+2022-11-14 18:57:47.625 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2022-07-20_00_ProviderOrganizationListDetails.sql"'
+2022-11-14 18:57:47.631 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2022-07-28_00_CheckPoliciesOnRestore.sql"'
+2022-11-14 18:57:47.647 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2022-09-12_00_AuthRequestInit.sql"'
+2022-11-14 18:57:47.678 +00:00 [Information] Executing Database Server script '"Bit.Migrator.DbScripts.2022-09-12_01_AuthRequestUpdate.sql"'
+2022-11-14 18:57:47.683 +00:00 [Information] Upgrade successful
+2022-11-14 18:57:47.713 +00:00 [Information] Migration successful.
+2022-11-14 19:00:00.053 +00:00 [Information] Starting job "DeleteAuthRequestsJob" at 11/14/2022 19:00:00.
+2022-11-14 19:00:00.053 +00:00 [Information] Starting job "DeleteSendsJob" at 11/14/2022 19:00:00.
+2022-11-14 19:00:00.057 +00:00 [Information] Execute job task: DeleteAuthRequestsJob: Start
+2022-11-14 19:00:00.076 +00:00 [Information] 0 records deleted from AuthRequests.
+2022-11-14 19:00:00.077 +00:00 [Information] Execute job task: DeleteAuthRequestsJob: End
+2022-11-14 19:00:00.080 +00:00 [Information] Finished job "DeleteAuthRequestsJob" at 11/14/2022 19:00:00.
+2022-11-14 19:00:00.132 +00:00 [Information] Deleting 0 sends.
+2022-11-14 19:00:00.132 +00:00 [Information] Finished job "DeleteSendsJob" at 11/14/2022 19:00:00.
+2022-11-14 19:05:00.001 +00:00 [Information] Starting job "DeleteSendsJob" at 11/14/2022 19:05:00.
+2022-11-14 19:05:00.124 +00:00 [Information] Deleting 0 sends.
+2022-11-14 19:05:00.125 +00:00 [Information] Finished job "DeleteSendsJob" at 11/14/2022 19:05:00.
+2022-11-14 19:10:00.002 +00:00 [Information] Starting job "DeleteSendsJob" at 11/14/2022 19:10:00.
+2022-11-14 19:10:00.006 +00:00 [Information] Deleting 0 sends.
+2022-11-14 19:10:00.006 +00:00 [Information] Finished job "DeleteSendsJob" at 11/14/2022 19:10:00.
+2022-11-14 19:15:00.001 +00:00 [Information] Starting job "DeleteAuthRequestsJob" at 11/14/2022 19:15:00.
+2022-11-14 19:15:00.001 +00:00 [Information] Starting job "DeleteSendsJob" at 11/14/2022 19:15:00.
+2022-11-14 19:15:00.002 +00:00 [Information] Execute job task: DeleteAuthRequestsJob: Start
+2022-11-14 19:15:00.059 +00:00 [Information] Deleting 0 sends.
+2022-11-14 19:15:00.059 +00:00 [Information] Finished job "DeleteSendsJob" at 11/14/2022 19:15:00.
+2022-11-14 19:15:00.069 +00:00 [Information] 0 records deleted from AuthRequests.
+2022-11-14 19:15:00.070 +00:00 [Information] Execute job task: DeleteAuthRequestsJob: End
+2022-11-14 19:15:00.070 +00:00 [Information] Finished job "DeleteAuthRequestsJob" at 11/14/2022 19:15:00.
+2022-11-14 19:20:00.000 +00:00 [Information] Starting job "DeleteSendsJob" at 11/14/2022 19:20:00.
+2022-11-14 19:20:00.003 +00:00 [Information] Deleting 0 sends.
+2022-11-14 19:20:00.004 +00:00 [Information] Finished job "DeleteSendsJob" at 11/14/2022 19:20:00.
+2022-11-14 19:25:00.001 +00:00 [Information] Starting job "DeleteSendsJob" at 11/14/2022 19:25:00.
+2022-11-14 19:25:00.059 +00:00 [Information] Deleting 0 sends.
+2022-11-14 19:25:00.059 +00:00 [Information] Finished job "DeleteSendsJob" at 11/14/2022 19:25:00.
+2022-11-14 19:30:00.001 +00:00 [Information] Starting job "DeleteAuthRequestsJob" at 11/14/2022 19:30:00.
+2022-11-14 19:30:00.001 +00:00 [Information] Starting job "DeleteSendsJob" at 11/14/2022 19:30:00.
+2022-11-14 19:30:00.002 +00:00 [Information] Execute job task: DeleteAuthRequestsJob: Start
+2022-11-14 19:30:00.014 +00:00 [Information] Deleting 0 sends.
+2022-11-14 19:30:00.015 +00:00 [Information] Finished job "DeleteSendsJob" at 11/14/2022 19:30:00.
+2022-11-14 19:30:00.024 +00:00 [Information] 0 records deleted from AuthRequests.
+2022-11-14 19:30:00.025 +00:00 [Information] Execute job task: DeleteAuthRequestsJob: End
+2022-11-14 19:30:00.025 +00:00 [Information] Finished job "DeleteAuthRequestsJob" at 11/14/2022 19:30:00.
+2022-11-14 19:35:00.000 +00:00 [Information] Starting job "DeleteSendsJob" at 11/14/2022 19:35:00.
+2022-11-14 19:35:00.079 +00:00 [Information] Deleting 0 sends.
+2022-11-14 19:35:00.079 +00:00 [Information] Finished job "DeleteSendsJob" at 11/14/2022 19:35:00.
+2022-11-14 19:40:00.001 +00:00 [Information] Starting job "DeleteSendsJob" at 11/14/2022 19:40:00.
+2022-11-14 19:40:00.003 +00:00 [Information] Deleting 0 sends.
+2022-11-14 19:40:00.004 +00:00 [Information] Finished job "DeleteSendsJob" at 11/14/2022 19:40:00.
+2022-11-14 19:45:00.000 +00:00 [Information] Starting job "DeleteAuthRequestsJob" at 11/14/2022 19:45:00.
+2022-11-14 19:45:00.000 +00:00 [Information] Starting job "DeleteSendsJob" at 11/14/2022 19:45:00.
+2022-11-14 19:45:00.001 +00:00 [Information] Execute job task: DeleteAuthRequestsJob: Start
+2022-11-14 19:45:00.003 +00:00 [Information] Deleting 0 sends.
+2022-11-14 19:45:00.004 +00:00 [Information] Finished job "DeleteSendsJob" at 11/14/2022 19:45:00.
+2022-11-14 19:45:00.049 +00:00 [Information] 0 records deleted from AuthRequests.
+2022-11-14 19:45:00.050 +00:00 [Information] Execute job task: DeleteAuthRequestsJob: End
+2022-11-14 19:45:00.050 +00:00 [Information] Finished job "DeleteAuthRequestsJob" at 11/14/2022 19:45:00.
+2022-11-14 19:50:00.011 +00:00 [Information] Starting job "DeleteSendsJob" at 11/14/2022 19:50:00.
+2022-11-14 19:50:00.466 +00:00 [Information] Deleting 0 sends.
+2022-11-14 19:50:00.474 +00:00 [Information] Finished job "DeleteSendsJob" at 11/14/2022 19:50:00.
+2022-11-14 19:55:00.001 +00:00 [Information] Starting job "DeleteSendsJob" at 11/14/2022 19:55:00.
+2022-11-14 19:55:00.006 +00:00 [Information] Deleting 0 sends.
+2022-11-14 19:55:00.007 +00:00 [Information] Finished job "DeleteSendsJob" at 11/14/2022 19:55:00.
