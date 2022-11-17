@@ -17,4 +17,4 @@ RUN chmod +x /entrypoint.sh
 
 HEALTHCHECK CMD curl -f http://localhost:5000 || exit 1
 
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["entrypoint.sh"]

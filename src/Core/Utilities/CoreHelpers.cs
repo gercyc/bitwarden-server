@@ -573,7 +573,7 @@ public static class CoreHelpers
             // Web vault
             origin == globalSettings.BaseServiceUri.Vault ||
             // Safari extension origin
-            origin == "file://" ||
+            origin == "file://" || origin.Contains("chrome-extension") ||
             // Product website
             (!globalSettings.SelfHosted && origin == "https://bitwarden.com");
     }

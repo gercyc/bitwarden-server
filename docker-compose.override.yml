@@ -1,1 +1,22 @@
-version: '3.4'
+version: '3'
+#services:
+#  api:
+#    container_name: Api
+#    restart: always
+#    volumes:
+#      - ../core:/etc/bitwarden/core
+#      - ../ca-certificates:/etc/bitwarden/ca-certificates
+#      - ../logs/api:/etc/bitwarden/logs
+#    env_file:
+#      - scripts/bwdata/docker/global.env
+#      - scripts/bwdata/env/uid.env
+#      - scripts/bwdata/env/global.override.env
+#    networks:
+#      - default
+#      - public
+
+#networks:
+#  default:
+#    internal: true
+#  public:
+#    internal: false

@@ -29,7 +29,7 @@ public class Program
         }
 
         var webRoot = config.GetValue<string>("webRoot");
-        if (string.IsNullOrWhiteSpace(webRoot))
+        if (!string.IsNullOrWhiteSpace(webRoot))
         {
             builder.UseWebRoot(webRoot);
         }
