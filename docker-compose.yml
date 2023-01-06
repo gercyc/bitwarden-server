@@ -27,7 +27,7 @@ services:
   mssql:
     image: bitwarden/mssql:2022.10.0
     container_name: bitwarden-mssql
-    restart: always
+    restart: no
     stop_grace_period: 60s
     volumes:
       - ../mssql/data:/var/opt/mssql/data
@@ -41,7 +41,7 @@ services:
   web:
     image: bitwarden/web:2022.10.0
     container_name: bitwarden-web
-    restart: always
+    restart: no
     volumes:
       - ../web:/etc/bitwarden/web
     env_file:
@@ -51,7 +51,7 @@ services:
   attachments:
     image: bitwarden/attachments:2022.10.0
     container_name: bitwarden-attachments
-    restart: always
+    restart: no
     volumes:
       - ../core/attachments:/etc/bitwarden/core/attachments
     env_file:
@@ -61,7 +61,7 @@ services:
   api:
     image: bitwarden/api:2022.10.0
     container_name: bitwarden-api
-    restart: always
+    restart: no
     volumes:
       - ../core:/etc/bitwarden/core
       - ../ca-certificates:/etc/bitwarden/ca-certificates
@@ -77,7 +77,7 @@ services:
   identity:
     image: bitwarden/identity:2022.10.0
     container_name: bitwarden-identity
-    restart: always
+    restart: no
     volumes:
       - ../identity:/etc/bitwarden/identity
       - ../core:/etc/bitwarden/core
@@ -94,7 +94,7 @@ services:
   sso:
     image: bitwarden/sso:2022.10.0
     container_name: bitwarden-sso
-    restart: always
+    restart: no
     volumes:
       - ../identity:/etc/bitwarden/identity
       - ../core:/etc/bitwarden/core
@@ -111,7 +111,7 @@ services:
   admin:
     image: bitwarden/admin:2022.10.0
     container_name: bitwarden-admin
-    restart: always
+    restart: no
     depends_on:
       - mssql
     volumes:
@@ -129,7 +129,7 @@ services:
   icons:
     image: bitwarden/icons:2022.10.0
     container_name: bitwarden-icons
-    restart: always
+    restart: no
     volumes:
       - ../ca-certificates:/etc/bitwarden/ca-certificates
       - ../logs/icons:/etc/bitwarden/logs
@@ -144,7 +144,7 @@ services:
   notifications:
     image: bitwarden/notifications:2022.10.0
     container_name: bitwarden-notifications
-    restart: always
+    restart: no
     volumes:
       - ../ca-certificates:/etc/bitwarden/ca-certificates
       - ../logs/notifications:/etc/bitwarden/logs
@@ -159,7 +159,7 @@ services:
   events:
     image: bitwarden/events:2022.10.0
     container_name: bitwarden-events
-    restart: always
+    restart: no
     volumes:
       - ../ca-certificates:/etc/bitwarden/ca-certificates
       - ../logs/events:/etc/bitwarden/logs
@@ -174,7 +174,7 @@ services:
   nginx:
     image: bitwarden/nginx:2022.10.0
     container_name: bitwarden-nginx
-    restart: always
+    restart: no
     depends_on:
       - web
       - admin

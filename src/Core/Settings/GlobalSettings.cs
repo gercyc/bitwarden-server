@@ -76,6 +76,7 @@ public class GlobalSettings : IGlobalSettings
     public virtual DistributedIpRateLimitingSettings DistributedIpRateLimiting { get; set; } =
         new DistributedIpRateLimitingSettings();
     public virtual IPasswordlessAuthSettings PasswordlessAuth { get; set; } = new PasswordlessAuthSettings();
+    public virtual ApplicationInsightsSettings ApplicationInsights { get; set; } = new ApplicationInsightsSettings();
 
     public string BuildExternalUri(string explicitValue, string name)
     {
@@ -534,5 +535,10 @@ public class GlobalSettings : IGlobalSettings
     public class PasswordlessAuthSettings : IPasswordlessAuthSettings
     {
         public bool KnownDevicesOnly { get; set; } = true;
+    }
+
+    public class ApplicationInsightsSettings
+    {
+        public string ConnectionString { get; set; }
     }
 }

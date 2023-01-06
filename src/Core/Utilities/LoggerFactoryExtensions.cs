@@ -121,6 +121,13 @@ public static class LoggerFactoryExtensions
                 }
             }
         }
+        else if (CoreHelpers.SettingHasValue(globalSettings?.ApplicationInsights.ConnectionString))
+        {
+            config.WriteTo.ApplicationInsights(globalSettings.ApplicationInsights.ConnectionString,
+                new Serilog.Sinks.ApplicationInsights.TelemetryConverters.TraceTelemetryConverter())
+                .Enrich.FromLogContext()
+                .Enrich.WithProperty("Project", globalSettings.ProjectName);
+        }
         else if (CoreHelpers.SettingHasValue(globalSettings.LogDirectory))
         {
             if (globalSettings.LogRollBySizeLimit.HasValue)
@@ -137,7 +144,6 @@ public static class LoggerFactoryExtensions
                 .Enrich.FromLogContext()
                 .Enrich.WithProperty("Project", globalSettings.ProjectName);
         }
-
         var serilog = config.CreateLogger();
         builder.AddSerilog(serilog);
 

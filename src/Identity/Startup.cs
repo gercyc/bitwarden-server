@@ -43,6 +43,9 @@ public class Startup
         // Data Protection
         services.AddCustomDataProtectionServices(Environment, globalSettings);
 
+        if (CoreHelpers.SettingHasValue(globalSettings?.ApplicationInsights.ConnectionString))
+            services.AddApplicationInsightsTelemetry();
+
         // Repositories
         services.AddSqlServerRepositories(globalSettings);
 
