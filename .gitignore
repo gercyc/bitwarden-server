@@ -225,3 +225,12 @@ src/Identity/Identity.zip
 src/Notifications/Notifications.zip
 bitwarden_license/src/Portal/Portal.zip
 bitwarden_license/src/Sso/Sso.zip
+/src/Admin/appsettings.Production.json
+/src/Admin/appsettings.json
+/src/Admin/appsettings.Development.json
+/src/Identity/appsettings.Production.json
+/src/Notifications/appsettings.Production.json
+/src/Api/Properties/launchSettings.json
+/src/Api/appsettings.Development.json
+/src/Api/appsettings.json
+/src/Api/appsettings.Production.json
