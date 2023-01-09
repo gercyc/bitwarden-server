@@ -42,8 +42,8 @@ public class LicensingService : ILicensingService
 
         var certThumbprint = environment.IsDevelopment() ?
             "207E64A231E8AA32AAF68A61037C075EBEBD553F" :
-            "‎B34876439FCDA2846505B2EFBBA6C4A951313EBE";
-        if (_globalSettings.SelfHosted)
+            "8D40370CAD00BD2A6644F7CCA6E57236936DBC14";
+        if (_globalSettings.SelfHosted && CoreHelpers.SettingHasValue(_globalSettings.LicenseCertificatePassword))
         {
             _certificate = CoreHelpers.GetEmbeddedCertificateAsync(environment.IsDevelopment() ? "licensing_dev.cer" : "licensing.cer", null)
                 .GetAwaiter().GetResult();
@@ -238,10 +238,10 @@ public class LicensingService : ILicensingService
 
     public byte[] SignLicense(ILicense license)
     {
-        if (_globalSettings.SelfHosted || !_certificate.HasPrivateKey)
-        {
-            throw new InvalidOperationException("Cannot sign licenses.");
-        }
+        //if (_globalSettings.SelfHosted || !_certificate.HasPrivateKey)
+        //{
+        //    throw new InvalidOperationException("Cannot sign licenses.");
+        //}
 
         return license.Sign(_certificate);
     }

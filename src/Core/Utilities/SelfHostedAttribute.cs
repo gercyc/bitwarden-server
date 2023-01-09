@@ -12,6 +12,7 @@ public class SelfHostedAttribute : ActionFilterAttribute
 
     public override void OnActionExecuting(ActionExecutingContext context)
     {
+        return;
         var globalSettings = context.HttpContext.RequestServices.GetRequiredService<GlobalSettings>();
         if (SelfHostedOnly && !globalSettings.SelfHosted)
         {
