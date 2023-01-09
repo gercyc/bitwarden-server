@@ -2955,6 +2955,7 @@
           "Serilog.AspNetCore": "[5.0.0, )",
           "Serilog.Extensions.Logging": "[3.1.0, )",
           "Serilog.Extensions.Logging.File": "[2.0.0, )",
+          "Serilog.Sinks.ApplicationInsights": "[4.0.0, )",
           "Serilog.Sinks.AzureCosmosDB": "[2.0.0, )",
           "Serilog.Sinks.SyslogMessages": "[2.0.6, )",
           "Stripe.net": "[40.0.0, )",

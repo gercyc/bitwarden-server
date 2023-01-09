@@ -3193,6 +3193,8 @@
           "Azure.Messaging.EventGrid": "[4.10.0, )",
           "Commercial.Core": "[2022.12.0, )",
           "Core": "[2022.12.0, )",
+          "Microsoft.ApplicationInsights.AspNetCore": "[2.21.0, )",
+          "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "[1.17.0, )",
           "SharedWeb": "[2022.12.0, )",
           "Swashbuckle.AspNetCore": "[6.3.1, )"
         }
@@ -3249,6 +3251,7 @@
           "Serilog.AspNetCore": "[5.0.0, )",
           "Serilog.Extensions.Logging": "[3.1.0, )",
           "Serilog.Extensions.Logging.File": "[2.0.0, )",
+          "Serilog.Sinks.ApplicationInsights": "[4.0.0, )",
           "Serilog.Sinks.AzureCosmosDB": "[2.0.0, )",
           "Serilog.Sinks.SyslogMessages": "[2.0.6, )",
           "Stripe.net": "[40.0.0, )",

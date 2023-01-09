@@ -3607,6 +3607,7 @@
         "type": "Project",
         "dependencies": {
           "Core": "[2022.12.0, )",
+          "Microsoft.ApplicationInsights.AspNetCore": "[2.21.0, )",
           "SharedWeb": "[2022.12.0, )",
           "Swashbuckle.AspNetCore.SwaggerGen": "[6.3.1, )"
         }
