@@ -38,6 +38,11 @@ public class MultiServicePushNotificationService : IPushNotificationService
                 _services.Add(new NotificationsApiPushNotificationService(
                     httpFactory, globalSettings, httpContextAccessor, hubLogger));
             }
+            if (CoreHelpers.SettingHasValue(globalSettings.NotificationHub.ConnectionString))
+            {
+                _services.Add(new NotificationHubPushNotificationService(installationDeviceRepository,
+                    globalSettings, httpContextAccessor, hubLogger));
+            }
         }
         else
         {
@@ -115,9 +120,9 @@ public class MultiServicePushNotificationService : IPushNotificationService
         return Task.FromResult(0);
     }
 
-    public Task PushLogOutAsync(Guid userId)
+    public Task PushLogOutAsync(Guid userId, bool excludeCurrentContext = false)
     {
-        PushToServices((s) => s.PushLogOutAsync(userId));
+        PushToServices((s) => s.PushLogOutAsync(userId, excludeCurrentContext));
         return Task.FromResult(0);
     }
 

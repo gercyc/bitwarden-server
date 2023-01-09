@@ -47,7 +47,7 @@ public class Startup
             services.AddApplicationInsightsTelemetry();
 
         // Repositories
-        services.AddSqlServerRepositories(globalSettings);
+        services.AddDatabaseRepositories(globalSettings);
 
         // Context
         services.AddScoped<ICurrentContext, CurrentContext>();

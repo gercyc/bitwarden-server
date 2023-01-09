@@ -81,7 +81,7 @@ public static class CoreHelpers
         thumbprint = CleanCertificateThumbprint(thumbprint);
 
         X509Certificate2 cert = null;
-        var certStore = new X509Store(StoreName.My, StoreLocation.CurrentUser);
+        var certStore = new X509Store(StoreName.My, StoreLocation.LocalMachine);
         certStore.Open(OpenFlags.ReadOnly);
         var certCollection = certStore.Certificates.Find(X509FindType.FindByThumbprint, thumbprint, false);
         if (certCollection.Count > 0)

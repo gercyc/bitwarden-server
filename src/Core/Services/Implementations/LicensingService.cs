@@ -42,8 +42,8 @@ public class LicensingService : ILicensingService
 
         var certThumbprint = environment.IsDevelopment() ?
             "207E64A231E8AA32AAF68A61037C075EBEBD553F" :
-            "‎B34876439FCDA2846505B2EFBBA6C4A951313EBE";
-        if (_globalSettings.SelfHosted)
+            "8D40370CAD00BD2A6644F7CCA6E57236936DBC14";
+        if (_globalSettings.SelfHosted && CoreHelpers.SettingHasValue(_globalSettings.LicenseCertificatePassword))
         {
             _certificate = CoreHelpers.GetEmbeddedCertificateAsync(environment.IsDevelopment() ? "licensing_dev.cer" : "licensing.cer", null)
                 .GetAwaiter().GetResult();
@@ -81,35 +81,49 @@ public class LicensingService : ILicensingService
 
         var enabledOrgs = await _organizationRepository.GetManyByEnabledAsync();
         _logger.LogInformation(Constants.BypassFiltersEventId, null,
-            "Validating licenses for {0} organizations.", enabledOrgs.Count);
+            "Validating licenses for {NumberOfOrganizations} organizations.", enabledOrgs.Count);
+
+        var exceptions = new List<Exception>();
 
         foreach (var org in enabledOrgs)
         {
-            var license = await ReadOrganizationLicenseAsync(org);
-            if (license == null)
+            try
             {
-                await DisableOrganizationAsync(org, null, "No license file.");
-                continue;
-            }
+                var license = await ReadOrganizationLicenseAsync(org);
+                if (license == null)
+                {
+                    await DisableOrganizationAsync(org, null, "No license file.");
+                    continue;
+                }
 
-            var totalLicensedOrgs = enabledOrgs.Count(o => o.LicenseKey.Equals(license.LicenseKey));
-            if (totalLicensedOrgs > 1)
-            {
-                await DisableOrganizationAsync(org, license, "Multiple organizations.");
-                continue;
-            }
+                var totalLicensedOrgs = enabledOrgs.Count(o => string.Equals(o.LicenseKey, license.LicenseKey));
+                if (totalLicensedOrgs > 1)
+                {
+                    await DisableOrganizationAsync(org, license, "Multiple organizations.");
+                    continue;
+                }
 
-            if (!license.VerifyData(org, _globalSettings))
-            {
-                await DisableOrganizationAsync(org, license, "Invalid data.");
-                continue;
-            }
+                if (!license.VerifyData(org, _globalSettings))
+                {
+                    await DisableOrganizationAsync(org, license, "Invalid data.");
+                    continue;
+                }
 
-            if (!license.VerifySignature(_certificate))
-            {
-                await DisableOrganizationAsync(org, license, "Invalid signature.");
-                continue;
+                if (!license.VerifySignature(_certificate))
+                {
+                    await DisableOrganizationAsync(org, license, "Invalid signature.");
+                    continue;
+                }
             }
+            catch (Exception ex)
+            {
+                exceptions.Add(ex);
+            }
+        }
+
+        if (exceptions.Any())
+        {
+            throw new AggregateException("There were one or more exceptions while validating organizations.", exceptions);
         }
     }
 
@@ -224,10 +238,10 @@ public class LicensingService : ILicensingService
 
     public byte[] SignLicense(ILicense license)
     {
-        if (_globalSettings.SelfHosted || !_certificate.HasPrivateKey)
-        {
-            throw new InvalidOperationException("Cannot sign licenses.");
-        }
+        //if (_globalSettings.SelfHosted || !_certificate.HasPrivateKey)
+        //{
+        //    throw new InvalidOperationException("Cannot sign licenses.");
+        //}
 
         return license.Sign(_certificate);
     }
